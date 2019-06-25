@@ -13,6 +13,10 @@ void swap(int *p, int *q){
   *q = tmp;
 }
 
+int median_of_median(int A[], int k){
+  
+}
+
 int quick_select(int A[], int n, int k){
   int i, j, pivot;
 
