@@ -4,6 +4,7 @@
 #define N 2999
 
 int A[N];
+int B[(N+4)/5];
 
 // *p と *q の値を入れ替える関数
 void swap(int *p, int *q){
@@ -37,7 +38,6 @@ int median_of_median(int A[], int n, int k){
   if(n<=5){
     return quick_select(A, n, k);
   }else{
-    int B[(n+4)/5];
     int i,j,l,pivot;
     int len_A = n;
     int len_B = 0;
