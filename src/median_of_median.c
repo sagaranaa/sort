@@ -50,7 +50,7 @@ int median_of_median(int A[], int n, int k){
     if(len_A!=0)B[len_B] = median_of_median(A+5*len_B,len_A,len_A/2);
 
     pivot = median_of_median(B,len_B+1,(len_B+1)/2);
-    for(i = j = 1; i < n; i++){
+    for(i = j = 0; i < n; i++){
       if(A[i] < pivot){
         swap(A+i, A+j);
         j++;
@@ -64,10 +64,10 @@ int median_of_median(int A[], int n, int k){
       }
     }
 
-    if(j <= k+1){
-      if(l < k+1) return quick_select(A+l, n-l, k-l);
+    if(j <= k){
+      if(l < k+1) return median_of_median(A+l, n-l, k-l);
       else return pivot;
-    }else return quick_select(A+1, j-1, k);
+    }else return median_of_median(A, j, k);
 
   }
 
