@@ -36,13 +36,8 @@ void quick_sort(int A[], int n){
     }
   }
 
-
-  if(j==0)quick_sort(A+l,n-l);
-  else if(l-1==n-1)quick_sort(A,j);
-  else {
     quick_sort(A,j);
     quick_sort(A+l,n-l);
-  }
 }
 
 int main(){

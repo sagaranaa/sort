@@ -32,12 +32,9 @@ void quick_sort(int A[], int n){
       j++;
     }
   }
-  if(j==0)quick_sort(A+1,n-1);
-  else if(j==n-1)quick_sort(A,n-1);
-  else {
+
     quick_sort(A,j);
     quick_sort(A+j+1,n-j-1);
-  }
 }
 
 int main(){
